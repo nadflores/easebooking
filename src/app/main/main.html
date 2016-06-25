@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div>
+    <top-bar></top-bar>
+  </div>
+
+  <div class="jumbotron text-center">
+    <h1>Hello There!</h1>
+    <p class="lead">
+      It's Fun in the Philippines!
+    </p>
+    <div class="row">
+      <div class="col-sm-6 col-md-4" ng-repeat="dest in main.destinations | orderBy:'id'">
+        <div class="thumbnail">
+          <img class="pull-right">
+          <div class="caption">
+            <h3><a ui-sref="destinations.detail({id: dest.id})">{{ dest.name }}</a></h3>
+            <p>{{ dest.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
