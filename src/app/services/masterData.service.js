@@ -7,11 +7,47 @@
 
     function MasterData(){
       var service = {
+        chronic: chronic,
         destinations: destinations,
-        destinationById: destinationById
+        destinationById: destinationById,
+        gender: gender,
       }
 
       return service;
+
+      function chronic(){
+        return [
+          "Addison's disease",
+          "Asthma",
+          "Bronchiectasis",
+          "Cardiac failure",
+          "Cardiomyopathy",
+          "Chronic obstructive pulmonary disorder",
+          "Chronic renal disease",
+          "Coronary artery disease",
+          "Crohn's disease",
+          "Diabetes insipidus",
+          "Diabetes mellitus types 1 & 2",
+          "Dysrhythmias",
+          "Epilepsy",
+          "Glaucoma",
+          "Haemophilia",
+          "Hyperlipidaemia",
+          "Hypertension",
+          "Hypothyroidism",
+          "Multiple sclerosis",
+          "Parkinson's disease",
+          "Rheumatoid arthritis",
+          "Schizophrenia",
+          "Systemic lupus erythematosus",
+          "Ulcerative colitis",
+          "Bipolar Mood Disorder",
+        ];
+      }
+
+      function gender(){
+        return ['Male', 'Female'];
+      }
 
       function destinationById(id){
         var dest;

@@ -3,6 +3,7 @@
 
   angular
     .module('easebooking', [
+      'ngCookies', 
       'ngAnimate', 
       'ngSanitize', 
       'ngMessages', 

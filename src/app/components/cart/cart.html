@@ -1,0 +1,9 @@
+<div class="jumbotron">
+  <div ng-show="cart.currentCart">
+    <p>Name: <span class="label label-warning"><strong>{{cart.currentCart.name}}</strong></span></p>
+    <p>Price: <span class="label label-warning"><strong>{{cart.currentCart.price | currency: "P "}}</strong></span></p>
+    <br>
+    <span class="btn label label-default" ng-click="cart.emptyCart()">Empty Cart</span>
+  </div>
+  <p ng-hide="cart.currentCart">Empty Cart</p>
+</div>

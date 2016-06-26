@@ -1,0 +1,26 @@
+<div class="col-md-6">
+  <form ng-show="book.currentCart" ng-submit="form.book()">
+    <div class="form-group">
+      <label>Name</label>
+      <input class="form-control" placeholder="Name" ng-model="form.client.name">
+    </div>
+    <div class="form-group">
+      <label>Age</label>
+      <input class="form-control" placeholder="Age" ng-model="form.client.age">
+    </div>
+    <div class="form-group">
+      <label>Gender</label>
+      <select ng-model="book.client.gender" ng-options="gender for gender in form.gender" class="form-control"></select>
+    </div>
+    <div class="form-group">
+      <label>Weight</label>
+      <input class="form-control" placeholder="Weight in Kg" ng-model="form.client.weight">
+    </div>
+    <div class="form-group">
+      <label>Chronic Health Problems</label>
+      <select ng-model="book.client.chronic" ng-options="chronic for chronic in form.chronics" class="form-control"></select>
+    </div>
+  </form>
+  <br>
+  <button type="submit" class="btn btn-block btn-success">Book</button>
+</div>

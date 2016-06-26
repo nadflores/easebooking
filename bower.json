@@ -2,6 +2,7 @@
   "name": "easebooking",
   "version": "0.0.0",
   "dependencies": {
+    "angular-cookies": "~1.5.3",
     "angular-animate": "~1.5.3",
     "angular-sanitize": "~1.5.3",
     "angular-messages": "~1.5.3",

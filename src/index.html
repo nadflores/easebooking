@@ -21,10 +21,19 @@
   </head>
   <body>
     <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div class="container">
+      <div class="row">
 
-    <div ui-view></div>
+        <div>
+          <top-bar></top-bar>
+        </div>
+
+        <div ui-view></div>
+        <span>Demo created by <a href="https://github.com/nadflores" target="blank">Nad Flores</p></span>
+      </div>
+    </div>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->

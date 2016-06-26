@@ -24,6 +24,12 @@
         templateUrl: 'app/destination/destination.html',
         controller: 'DestinationController',
         controllerAs: 'dest'
+      })
+      .state('booking', {
+        url: '/booking',
+        templateUrl: 'app/booking/booking.html',
+        controller: 'BookingController',
+        controllerAs: 'book'
       });
 
     $urlRouterProvider.otherwise('/');
