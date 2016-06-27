@@ -3,30 +3,17 @@
 
   angular
     .module('easebooking')
-    .directive('topBar', topBar)
-    .controller('NavController', NavController)
+    .directive('topBar', topBar);
 
   /** @ngInject */
   function topBar() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/navbar/navbar.html',
-      controller: 'NavController',
-      controllerAs: 'nav'
+      templateUrl: 'app/components/navbar/navbar.html'
     };
 
     return directive;
 
-  }
-
-  function NavController($state){
-    var vm = this;
-
-    vm.home = home;
-
-    function home(){
-      $state.go('home');
-    }
   }
 
 })();
