@@ -1,0 +1,13 @@
+<h3>Confirmation Receipt</h3>
+<div class="jumbotron">
+  <p class="lead">Destination: <span class="label label-warning"><strong>{{confirm.dest.name}}</strong></span></p>
+  <p class="lead">Amount: <span class="label label-warning"><strong>{{confirm.dest.price | currency:"P "}}</strong></span></p>
+  <br>
+  <p ng-show="confirm.client.name" class="lead">Name: <strong>{{confirm.client.name}}</strong></p>
+  <p ng-show="confirm.client.age" class="lead">Age: <strong>{{confirm.client.age}}</strong></p>
+  <p ng-show="confirm.client.gender" class="lead">Gender: <strong>{{confirm.client.gender}}</strong></p>
+  <p ng-show="confirm.client.weight" class="lead">Weight: <strong>{{confirm.client.weight}}</strong></p>
+  <p ng-show="confirm.client.chronic" class="lead">Health Problems: <strong>{{confirm.client.chronic}}</strong></p>
+
+  <button ui-sref="home" class="btn btn-lg btn-success">View More Destinations</button>
+</div>

@@ -30,6 +30,12 @@
         templateUrl: 'app/booking/booking.html',
         controller: 'BookingController',
         controllerAs: 'book'
+      })
+      .state('confirmation', {
+        url: '/booking/confirmation',
+        templateUrl: 'app/booking/confirmation/confirmation.html',
+        controller: 'ConfirmationController',
+        controllerAs: 'confirm'
       });
 
     $urlRouterProvider.otherwise('/');

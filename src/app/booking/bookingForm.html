@@ -1,26 +1,35 @@
 <div class="col-md-6">
-  <form ng-show="book.currentCart" ng-submit="form.book()">
-    <div class="form-group">
+  <form name="bookForm" ng-show="book.currentCart" novalidate>
+    <div class="form-group" ng-class="{ 'has-error': bookForm.name.$touched && bookForm.name.$invalid }">
       <label>Name</label>
-      <input class="form-control" placeholder="Name" ng-model="form.client.name">
+      <input name="name" class="form-control" placeholder="Name" ng-model="form.client.name" required>
+      <div class="help-block" ng-messages="bookForm.name.$error" ng-show="bookForm.name.$touched">
+        <div ng-messages-include="app/booking/errorMessages.html"></div>
+      </div>
     </div>
-    <div class="form-group">
+    <div class="form-group" ng-class="{ 'has-error': bookForm.age.$touched && bookForm.age.$invalid }">
       <label>Age</label>
-      <input class="form-control" placeholder="Age" ng-model="form.client.age">
+      <input name="age" class="form-control" placeholder="Age" ng-model="form.client.age" ng-pattern="/^\d+$/" required>
+      <div class="help-block" ng-messages="bookForm.age.$error" ng-show="bookForm.age.$touched">
+        <div ng-messages-include="app/booking/errorMessages.html"></div>
+      </div>
     </div>
     <div class="form-group">
       <label>Gender</label>
-      <select ng-model="book.client.gender" ng-options="gender for gender in form.gender" class="form-control"></select>
+      <select ng-model="form.client.gender" ng-options="gender for gender in form.gender" class="form-control"></select>
     </div>
-    <div class="form-group">
+    <div class="form-group" ng-class="{ 'has-error': bookForm.weight.$touched && bookForm.weight.$invalid }">
       <label>Weight</label>
-      <input class="form-control" placeholder="Weight in Kg" ng-model="form.client.weight">
+      <input name="weight" class="form-control" placeholder="Weight in Kg" ng-model="form.client.weight" ng-pattern="/^\d+$/">
+      <div class="help-block" ng-messages="bookForm.weight.$error" ng-show="bookForm.weight.$touched">
+        <div ng-messages-include="app/booking/errorMessages.html"></div>
+      </div>
     </div>
     <div class="form-group">
       <label>Chronic Health Problems</label>
-      <select ng-model="book.client.chronic" ng-options="chronic for chronic in form.chronics" class="form-control"></select>
+      <select ng-model="form.client.chronic" ng-options="chronic for chronic in form.chronics" class="form-control"></select>
     </div>
+    <br>
+    <button type="submit" class="btn btn-block btn-success btn-lg" ng-click="form.book(form.client)" ng-disabled="bookForm.$invalid">Book</button>
   </form>
-  <br>
-  <button type="submit" class="btn btn-block btn-success">Book</button>
 </div>
